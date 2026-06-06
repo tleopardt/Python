@@ -25,9 +25,6 @@ Predicts presence of heart disease using clinical features.
 | Logistic Regression     | 0.905 ± 0.018    | 0.845 ± 0.036    |
 
 
-![Evaluation report](optuna-tuning/eval_report.png)
-![Feature importance](optuna-tuning/feature_importance.png)
-
 ## Key findings
 - Found 723 duplicates data and 303 unique data. Removing the duplicates reduced data leakage risk during cross validation
 produce a more realistic model evaluation.
@@ -43,10 +40,11 @@ produce a more realistic model evaluation.
 ### Where the model still fails
 **Failure summary between 3 models:**
 
-Model                FP  FN  Total Errors
-LogisticRegression   7   5            12
-RandomForest         7   7            14
-XGBoost (default)    9   4            13
+| Model                   | FP               | FN               | Total Errors     |
+|-------------------------|------------------|------------------|------------------|
+| Logistic Regression.    | 7                | 5                | 12               |
+| Random Forest           | 7                | 7                | 14               |
+| XGBoost                 | 9                | 4                | 13               |
 
 **False Negative & False Positive**
 - The model struggles to classify patients whose clinical indicators appear close to the healthy group. Most false-negative cases have low chest-pain scores `(cp=0)` and low vessel counts `(ca)`, making them difficult to distinguish from healthy patients.
