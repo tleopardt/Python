@@ -21,6 +21,7 @@ python3 heart-disease-prediction/run.py
 - Target: Heart disease (0/1)
 
 ## Project Structure
+```
 python/
 ├── heart-disease-prediction/
     └── run.py
@@ -32,7 +33,7 @@ python/
 ├── model_tuned.pkl
 ├── README.md
 └── requirements.txt
-
+```
 ## Methodology
 
 ```text
